@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\support\Facades\Auth;
 
 class IsAdmin
 {
@@ -15,10 +16,10 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::user()->role == ADMIN){
-            //redirect to admin page
-        }else{
-            //redirect to user page
+        if(Auth::user()->role == 'admin'){
+            return $next($request);
         }
+
+        abort(401);
     }
 }
