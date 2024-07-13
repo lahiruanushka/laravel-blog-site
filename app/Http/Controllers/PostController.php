@@ -11,28 +11,28 @@ class PostController extends Controller
 {
     public function store(Request $request)
     {
-        // $validatedData = $request->validate([
-        //     'title' => 'required|string|max:255',
-        //     'description' => 'required|string',
-        // ]);
-
-        $validator = Validator::make($request->all(),[
-            'title' => 'required',
-            'description' => 'required'
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'thumbnail' => 'required|image'
         ]);
 
         if ($validator->fails()) {
-            return back()->with('status','something went wrong');
-        }else{
-            Post::create([
-            'user_id' => auth()->user()->id,
-            'title' => $request['title'],
-            'description' => $request['description']
-        ]);    
+            return back()->withErrors($validator)->withInput();
         }
 
-        // return back()->with('status', 'Post created successfully!');
-         return redirect()->route('posts.all')->with('status', 'Post created successfully!');
+        // Create image name
+        $imageName = time() . "." . $request->thumbnail->extension();
+        $request->thumbnail->move(public_path('images/thumbnails'), $imageName);
+
+        Post::create([
+            'user_id' => auth()->user()->id,
+            'title' => $request['title'],
+            'description' => $request['description'],
+            'thumbnail' => $imageName
+        ]);
+
+        return redirect()->route('posts.all')->with('status', 'Post created successfully!');
     }
 
     public function show($id)
@@ -49,8 +49,6 @@ class PostController extends Controller
 
     public function update($postId, Request $request)
     {
-        //dd($request->all());
-
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
@@ -62,12 +60,11 @@ class PostController extends Controller
         return redirect()->route('posts.all')->with('status', 'Post updated successfully!');
     }
 
-   public function delete($postId)
-{
-    $post = Post::findOrFail($postId);
-    $post->delete();
+    public function delete($postId)
+    {
+        $post = Post::findOrFail($postId);
+        $post->delete();
 
-    return redirect()->route('posts.all')->with('status', 'Post deleted successfully!');
-}
-
+        return redirect()->route('posts.all')->with('status', 'Post deleted successfully!');
+    }
 }
