@@ -32,4 +32,4 @@ Route::get('/posts/delete/{postId}', [PostController::class, 'delete'])->name('p
 Route::group(['middleware' => ['admin'], 'prfix' => 'admin','as' => 'admin.'],function(){
 		Route::get('/admin/dashboard', [DashboardController::class, 'index'])->middleware('admin')->name('dashboard');
 
-})
+});
