@@ -101,3 +101,28 @@ h1, h2, h3, h4, h5, h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+
+.card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn-outline-primary {
+        border-radius: 20px;
+        font-size: 0.85rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .card-footer small {
+        font-size: 0.8rem;
+    }
+
+    .card-image{
+      
+    height: 200px; /* Adjust this value as needed */
+        object-fit: cover; 
+    }
