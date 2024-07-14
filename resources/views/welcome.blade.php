@@ -1,26 +1,15 @@
-@extends('layouts.frontend')
+@extends('layouts.app')
 
 @section('content')
 
-<main class="container mt-5">
-   <section class="py-5 bg-light mb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold mb-4">Welcome to BlogNest</h1>
-                <p class="lead mb-4">Create and Publish Your Posts</p>
-                <a href="#" class="btn btn-primary btn-lg">Get Started</a>
-            </div>
-        </div>
-    </div>
-</section>
-
+<main class="container mt-3">
+@include('partials.hero');
 
     @if($posts->count() > 0)
-       <div class="row mb-4">
+       <div class="row mb-3">
     @foreach($posts as $post)
         <div class="col-md-6 d-flex">
-            <div class="card mb-4 shadow-sm h-100 " style="width: 24rem;" >
+            <div class="card m-4 shadow-sm h-100 " style="width: 24rem;" >
                 <img src="{{ asset('images/thumbnails/' . $post->thumbnail) }}" class="card-img-top card-image" alt="{{ $post->title }}">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-primary font-weight-bold">{{ $post->title }}</h5>
