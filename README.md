@@ -37,8 +37,8 @@ Welcome to **BlogNest**, a dynamic blog platform developed to share insights on 
 ### Steps
 1. Clone the repository:
     ```bash
-    git clone https://github.com/lahiruanushka/BlogNest.git
-    cd BlogNest
+    git clone https://github.com/lahiruanushka/laravel-blog-site.git
+    cd laravel-blog-site
     ```
 
 2. Install dependencies:
