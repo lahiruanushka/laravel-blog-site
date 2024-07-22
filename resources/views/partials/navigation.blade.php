@@ -9,12 +9,18 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        @auth
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">New Post</a>
+                            <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('posts.all') }}">All Posts</a>
+                            <a class="nav-link" href="{{ route('posts') }}">Posts</a>
+                        </li>
+                        @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('posts.create') }}">New Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('posts.manage') }}">Manage Posts</a>
                         </li>
                         @endauth
                     </ul>

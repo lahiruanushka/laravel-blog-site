@@ -8,7 +8,7 @@
     @if($posts->count() > 0)
     <div class="row justify-content-md-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-            <h2 class="display-5 mb-4 mb-md-5 text-center">Latest Articles</h2>
+            <h2 class="display-5 mb-4 mb-md-5 text-center">Latest Posts</h2>
             <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
         </div>
     </div>
@@ -39,17 +39,7 @@
                             </figure>
                             <div class="card-body m-0 p-0">
                                 <div class="entry-header mb-3">
-                                    <ul class="entry-meta list-unstyled d-flex mb-3" style="font-size: 0.85rem;">
-                                        <li class="me-2">
-                                            <a class="d-inline-flex px-1 py-1 link-primary text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-2 text-decoration-none fs-8" href="#!">Tag 1</a>
-                                        </li>
-                                        <li class="me-2">
-                                            <a class="d-inline-flex px-1 py-1 link-primary text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-2 text-decoration-none fs-8" href="#!">Tag 2</a>
-                                        </li>
-                                        <li class="me-2">
-                                            <a class="d-inline-flex px-1 py-1 link-primary text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-2 text-decoration-none fs-8" href="#!">Tag 3</a>
-                                        </li>
-                                    </ul>
+
                                     <h2 class="card-title entry-title h4 m-0">
                                         <p class="link-dark text-decoration-none" href="#!">{{ \Illuminate\Support\Str::limit($post->description, 150) }}</p>
                                     </h2>
@@ -86,7 +76,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <a href="#!" class="btn bsb-btn-2xl btn-primary rounded-pill mt-5 mt-xl-10">All Articles</a>
+                    <a href="{{route('posts')}}" class="btn bsb-btn-2xl btn-primary rounded-pill mt-5 mt-xl-10">All Posts</a>
                 </div>
             </div>
         </div>

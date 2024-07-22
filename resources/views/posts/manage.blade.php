@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h2>All Posts</h2>
+    <h2>Manage Posts</h2>
       @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

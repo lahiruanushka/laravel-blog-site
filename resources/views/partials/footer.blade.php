@@ -4,7 +4,7 @@
       <div class="row gy-5 gy-md-0 align-items-md-center">
         <div class="col-xs-12 col-md-7 order-1 order-md-0">
           <div class="copyright text-center text-md-start">
-            &copy; <span>{{ date('Y') }} BlogNest. All rights reserved.</span>
+            &copy; <span>{{ date('Y') }} Blog Nest. All rights reserved.</span>
           </div>
         </div>
 
