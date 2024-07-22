@@ -1,4 +1,4 @@
-# BlogNest
+# BlogNest - Laravel Blog Site
 
 Welcome to **BlogNest**, a dynamic blog platform developed to share insights on various topics including AI, Web 3.0, and more. This project was initially based on a YouTube tutorial and has been enhanced with additional features to improve user experience and functionality.
 
