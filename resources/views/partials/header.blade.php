@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Page Title and Favicon -->
-    <title>BlogNest</title>
+    <title>Blog Nest</title>
     <link rel="icon" type="image/png" href="{{ asset('images/blog.png') }}">
 
     <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
