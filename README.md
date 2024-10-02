@@ -7,8 +7,6 @@ BlogNest is a dynamic blog platform developed to share insights on various topic
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
 
-
-
 ## Features
 - User Authentication (Login/Registration)
 - Create, Edit, Delete, and View Blog Posts
@@ -25,17 +23,16 @@ BlogNest is a dynamic blog platform developed to share insights on various topic
 - MySQL (Database)
 - Blade (Laravel's templating engine)
 
-### Prerequisites
-- PHP 7.4 or higher
-- Composer
-- Node.js and NPM (for front-end dependencies)
-- MySQL
-
-
 ## Usage
 - Visit the homepage at `http://localhost:8000`
 - Register a new user or login with an existing account.
 - Create, edit, or delete blog posts.
 - Navigate through the blog posts using pagination.
+
+## Screenshots
+![BlogNest Screenshot](docs/screenshot1.png)
+![BlogNest Screenshot](docs/screenshot2.png)
+![BlogNest Screenshot](docs/screenshot3.png)
+![BlogNest Screenshot](docs/screenshot4.png)
 
 
