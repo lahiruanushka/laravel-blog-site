@@ -1,5 +1,5 @@
 @include('partials.header')
-@include('partials.navigation');
+@include('partials.navigation')
 
 <main>
     @yield('content')
