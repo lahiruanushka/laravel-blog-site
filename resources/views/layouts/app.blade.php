@@ -1,7 +1,7 @@
 @include('partials.header')
 @include('partials.navigation');
 
-<main class="py-4">
+<main>
     @yield('content')
 </main>
 

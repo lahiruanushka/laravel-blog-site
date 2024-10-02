@@ -80,17 +80,18 @@ class PostController extends Controller
         return redirect()->route('posts.manage')->with('status', 'Post updated successfully!');
     }
 
-    public function delete($postId)
+     public function destroy(Post $post)
     {
-        $post = Post::findOrFail($postId);
-
-        // Delete the thumbnail if necessary
-        if ($post->thumbnail) {
+        // Delete the image if it exists
+        if ($post->image) {
             unlink(public_path('images/thumbnails/') . $post->thumbnail);
+            Storage::delete($post->image);
         }
 
+        // Delete the post record from the database
         $post->delete();
 
+        // Redirect back with a success message
         return redirect()->route('posts.manage')->with('status', 'Post deleted successfully!');
     }
 

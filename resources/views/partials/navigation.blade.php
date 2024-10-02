@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                <img src="{{ asset('images/blog.png') }}" alt="" style="width: 30px;" class="me-3">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     BlogNest
                 </a>

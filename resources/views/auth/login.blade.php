@@ -10,7 +10,7 @@
           <div class="card-body p-3 p-md-4 p-xl-5">
             <div class="text-center mb-3">
               <a href="#!">
-                <img src="" alt="BlogNest Logo" class="custom-img" width="175" height="57">
+                <img src="{{ asset('images/blog.png') }}" alt="BlogNest Logo" class="custom-img" width="100">
 
               </a>
             </div>
