@@ -30,9 +30,15 @@ BlogNest is a dynamic blog platform developed to share insights on various topic
 - Navigate through the blog posts using pagination.
 
 ## Screenshots
+- Home Page
 ![BlogNest Screenshot](docs/screenshot1.png)
+- All Posts Page
 ![BlogNest Screenshot](docs/screenshot2.png)
+- Manage Posts Page
 ![BlogNest Screenshot](docs/screenshot3.png)
+- Add New Post
+![BlogNest Screenshot](docs/screenshot5.png)
+- Edit Post 
 ![BlogNest Screenshot](docs/screenshot4.png)
 
 
