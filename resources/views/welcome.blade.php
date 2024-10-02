@@ -39,10 +39,12 @@
                             </figure>
                             <div class="card-body m-0 p-0">
                                 <div class="entry-header mb-3">
-
                                     <h2 class="card-title entry-title h4 m-0">
-                                        <p class="link-dark text-decoration-none" href="#!">{{ \Illuminate\Support\Str::limit($post->description, 150) }}</p>
+                                        {{ $post->title }}
                                     </h2>
+                                    <p class="link-dark text-decoration-none">
+                                        {{ \Illuminate\Support\Str::limit($post->description, 150) }}
+                                    </p>
                                 </div>
                             </div>
                             <div class="card-footer border-0 bg-transparent p-0 m-0">
