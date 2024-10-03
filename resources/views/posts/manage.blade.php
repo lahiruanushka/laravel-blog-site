@@ -2,7 +2,13 @@
 
 @section('content')
     <div class="container my-5">
-        <h2 class="mb-4">Manage Your Posts</h2>
+        @if (Auth::user()->isAdmin())
+            {{-- Admin view --}}
+            <h2 class="mb-4">Manage All Posts</h2>
+        @else
+            {{-- Regular user view --}}
+            <h2 class="mb-4">Manage Your Posts</h2>
+        @endif
 
         @if (session('status'))
             <div class="alert alert-success" role="alert">
@@ -17,6 +23,9 @@
                         <th scope="col">Title</th>
                         <th scope="col" style="max-width: 300px;">Description</th>
                         <th scope="col">Image</th>
+                        @if (Auth::user()->isAdmin())
+                            <th scope="col">Posted by</th>
+                        @endif
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -34,14 +43,21 @@
                                     <span>No Image</span>
                                 @endif
                             </td>
+
+                            @if (Auth::user()->isAdmin())
+                                <td>
+                                    <small>{{ $post->user->name }}</small>
+                                </td>
+                            @endif
                             <td>
                                 <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                <button class="btn btn-danger btn-sm" onclick="showDeleteModal({{ $post->id }})">Delete</button>
+                                <button class="btn btn-danger btn-sm"
+                                    onclick="showDeleteModal({{ $post->id }})">Delete</button>
                             </td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="4" class="text-center">No posts found</td>
+                            <td colspan="5" class="text-center">No posts found</td>
                         </tr>
                     @endforelse
                 </tbody>
@@ -62,7 +78,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <!-- Form is no longer hidden, the button will be part of the modal -->
                     <form id="delete-form" method="POST">
                         @csrf
                         @method('DELETE')

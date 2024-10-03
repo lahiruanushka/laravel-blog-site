@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
-    public function create(){
+    public function create()
+    {
         return view('posts.create');
     }
 
@@ -80,7 +81,7 @@ class PostController extends Controller
         return redirect()->route('posts.manage')->with('status', 'Post updated successfully!');
     }
 
-     public function destroy(Post $post)
+    public function destroy(Post $post)
     {
         // Delete the image if it exists
         if ($post->image) {
@@ -101,9 +102,16 @@ class PostController extends Controller
         return view('posts.index', compact('posts'));
     }
 
-     public function manage()
+    public function manage()
     {
-        $posts = Post::where('user_id', Auth::user()->id)->get();
+        if (Auth::user()->role === 'admin') {
+            // Admin can see all posts
+            $posts = Post::all();
+        } else {
+            // Regular users can only see their own posts
+            $posts = Post::where('user_id', Auth::user()->id)->get();
+        }
+
         return view('posts.manage', compact('posts'));
     }
 }
