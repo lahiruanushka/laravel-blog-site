@@ -11,7 +11,9 @@
 
                     <div class="card-body">
                         <p class="card-text">{{ $post->description }}</p>
-                        <img class="img-fluid rounded mt-3" loading="lazy" src="{{ asset('images/thumbnails/' . $post->thumbnail) }}" alt="{{ $post->title }}">
+                        <img class="img-fluid rounded mt-3" loading="lazy"
+                            src="{{ asset('images/thumbnails/' . ($post->thumbnail ?? 'fallback.jfif')) }}"
+                            alt="{{ $post->title }}">
                     </div>
 
                     <div class="card-footer bg-light text-muted d-flex justify-content-between align-items-center">
