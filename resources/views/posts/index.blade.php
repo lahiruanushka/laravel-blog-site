@@ -9,7 +9,7 @@
             </div>
         </div>
     @else
-        <div class="alert alert-info" role="alert">
+        <div class="alert alert-info ms-3 me-3 mt-4" role="alert">
             No posts available. Check back later!
         </div>
     @endif

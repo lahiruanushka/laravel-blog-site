@@ -27,7 +27,7 @@
                 @endauth
                 @if (Auth::check() && Auth::user()->role === 'admin')
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('posts.manage') }}">Manage Users</a>
+                        <a class="nav-link" href="{{ route('admin.users.index') }}">Manage Users</a>
                     </li>
                 @endif
             </ul>
