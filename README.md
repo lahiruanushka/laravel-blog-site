@@ -6,6 +6,7 @@ BlogNest is a dynamic blog platform developed to share insights on various topic
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 
 ## Features
 - User Authentication (Login/Registration)
@@ -53,6 +54,5 @@ BlogNest is a dynamic blog platform developed to share insights on various topic
 - Admin Manage Users
 ![BlogNest Screenshot](docs/screenshot8.png)
 
-  
 
-
+Feel free to explore BlogNest and share your thoughts! 🌟
