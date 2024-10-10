@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container my-5">
-        <h2 class="mb-4">User List</h2>
+        <h2 class="mb-4">Users List</h2>
 
         @if (session('status'))
             <div class="alert alert-success" role="alert">
