@@ -38,7 +38,7 @@ class PostController extends Controller
             'thumbnail' => $imageName
         ]);
 
-        return redirect()->route('posts')->with('status', 'Post created successfully!');
+        return redirect()->route('posts.index')->with('status', 'Post created successfully!');
     }
 
     public function show($id)
@@ -106,12 +106,13 @@ class PostController extends Controller
     {
         if (Auth::user()->role === 'admin') {
             // Admin can see all posts
-            $posts = Post::all();
+            $posts = Post::paginate(10); 
         } else {
             // Regular users can only see their own posts
-            $posts = Post::where('user_id', Auth::user()->id)->get();
+            $posts = Post::where('user_id', Auth::user()->id)->paginate(10);
         }
-
+    
         return view('posts.manage', compact('posts'));
     }
+    
 }

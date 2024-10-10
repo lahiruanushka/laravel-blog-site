@@ -15,7 +15,7 @@
                     <a class="nav-link" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('posts') }}">Posts</a>
+                    <a class="nav-link" href="{{ route('posts.index') }}">Posts</a>
                 </li>
                 @auth
                     <li class="nav-item">

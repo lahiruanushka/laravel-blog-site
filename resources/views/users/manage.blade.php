@@ -38,6 +38,14 @@
                     @endforelse
                 </tbody>
             </table>
+
+            {{-- Pagination Links --}}
+            <div class="row justify-content-center mt-4">
+                <div class="col-12">
+                    <!-- Pagination Links -->
+                    {{ $users->links('pagination::bootstrap-4') }}
+                </div>
+            </div>
         </div>
     </div>
 

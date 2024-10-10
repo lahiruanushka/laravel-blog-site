@@ -78,7 +78,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <a href="{{route('posts')}}" class="btn bsb-btn-2xl btn-primary rounded-pill mt-5 mt-xl-10">All Posts</a>
+                    <a href="{{route('posts.index')}}" class="btn bsb-btn-2xl btn-primary rounded-pill mt-5 mt-xl-10">All Posts</a>
                 </div>
             </div>
         </div>
