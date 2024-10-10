@@ -23,6 +23,12 @@ BlogNest is a dynamic blog platform developed to share insights on various topic
 - MySQL (Database)
 - Blade (Laravel's templating engine)
 
+## Key Features
+- Blog post management (create, edit, delete, view posts)
+- User role-based access (Admins can manage all users and posts)
+- Responsive, modern UI with Bootstrap 5
+- Real-time dashboard displaying user and post statistics
+
 ## Usage
 - Visit the homepage at `http://localhost:8000`
 - Register a new user or login with an existing account.
@@ -40,5 +46,13 @@ BlogNest is a dynamic blog platform developed to share insights on various topic
 ![BlogNest Screenshot](docs/screenshot5.png)
 - Edit Post 
 ![BlogNest Screenshot](docs/screenshot4.png)
+- Admin Dashboard
+![BlogNest Screenshot](docs/screenshot6.png)
+- Admin Manage Posts
+![BlogNest Screenshot](docs/screenshot7.png)
+- Admin Manage Users
+![BlogNest Screenshot](docs/screenshot8.png)
+
+  
 
 
